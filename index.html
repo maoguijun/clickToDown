@@ -6,14 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-</head>
-<style>
-  div{
-    margin-bottom: 16px
-  }
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+  <style>
+    div {
+      margin-bottom: 16px
+    }
 
-</style>
+    .btn {
+      position: fixed;
+      top: -100px;
+      visibility: hidden;
+    }
+
+    input {
+      position: fixed;
+      top: -100px
+    }
+  </style>
+</head>
+
 <body>
+  <!-- <button class='btn'>点我复制</button> -->
+  <input type="text" id="inputText" value="测试文本a" />
+  <input type="button" id="btn" value="复制" />
   <div>
     <div>
       <img src="/download/it/u=4135158290,2541209692&fm=27&gp=0.jpg" />
@@ -29,6 +44,21 @@
       </a>
     </div>
   </div>
+  <script src="./js/index.js"></script>
+  <!-- <script>
+    // var btn = document.getElementById('btn');
+    function click() {
+    var inputText = document.getElementById('inputText');
+    var currentFocus = document.activeElement;
+    inputText.focus();
+    inputText.setSelectionRange(0, inputText.value.length);
+    document.execCommand('copy', true);
+    console.log('aa')
+    currentFocus.focus();
+    }
+    // btn.addEventListener('click', click);
+    document.body.addEventListener('click', click) -->
+  </script>
 </body>
 
 </html>
